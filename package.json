@@ -48,7 +48,7 @@
   "scripts": {
     "build": "tsc --p tsconfig.prod.json",
     "test": "npx jest --coverage",
-    "coveralls": "cat coverage/lcov.info | coveralls"
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "jest": {
     "preset": "ts-jest",
