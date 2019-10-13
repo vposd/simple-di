@@ -1,0 +1,46 @@
+{
+  "name": "di-container",
+  "version": "0.0.4",
+  "description": "Simple lightweight DI container written in Typescript",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "dependency injection",
+    "dependency",
+    "injection",
+    "simple di",
+    "ioc",
+    "container",
+    "javascript",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "dependencies": {
+    "typescript": "^3.6.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "reflect-metadata": "^0.1.13",
+    "ts-jest": "^24.1.0"
+  },
+  "scripts": {
+    "build": "tsc --p tsconfig.prod.json",
+    "test": "npx jest",
+    "prebublish": "npm run build"
+  },
+  "author": "",
+  "license": "MIT",
+  "jest": {
+    "preset": "ts-jest",
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    }
+  }
+}
