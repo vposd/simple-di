@@ -1,6 +1,6 @@
 {
   "name": "@vposd/simple-di",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "Minimalistic and lightweight DI container written in Typescript",
   "main": "dist/index.js",
   "files": [
