@@ -1,6 +1,6 @@
-import { isFunction, isSymbol } from './util';
 import 'reflect-metadata';
 import { DEPENDENCIES_MEDATADA_KEY } from './decorators';
+import { isFunction, isSymbol } from './util';
 /** DI Container */
 export class Container {
     constructor() {

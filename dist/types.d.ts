@@ -1,13 +1,13 @@
-export interface Type<T> {
+export interface Constructor<T> {
     new (...args: any[]): T;
 }
 export interface ProvidersOptions {
-    provide: DependencyType<any>;
-    useClass?: Type<any>;
+    provide: Dependency<any>;
+    useClass?: Constructor<any>;
 }
 export interface Provider {
-    target: Type<any>;
-    deps: DependencyType<any>[];
+    target: Constructor<any>;
+    deps: Dependency<any>[];
 }
-export declare type DependencyType<T> = Type<T> | Function | symbol;
+export declare type Dependency<T> = Constructor<T> | Function | symbol;
 export declare type ClassDecorator<T> = (target: T) => void;

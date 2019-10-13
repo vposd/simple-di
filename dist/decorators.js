@@ -1,6 +1,6 @@
 import 'reflect-metadata';
-import { add } from './util';
 import { Container } from './container';
+import { add } from './util';
 export const DEPENDENCIES_MEDATADA_KEY = 'dependencies:list';
 /**
  * Injectable decorator
@@ -12,13 +12,13 @@ export const Injectable = () => (target) => {
 };
 /**
  * Inject decorator
- * @param {DependencyType<T>} dependency dependency type
+ * @param {Dependency<T>} dependency dependency type
 */
 export const Inject = (dep) => (target, _, parameterIndex) => {
     const definedDeps = Reflect.getMetadata(DEPENDENCIES_MEDATADA_KEY, target) || [];
     const deps = definedDeps.length
         ? definedDeps
-        : Reflect.getMetadata('design:paramtypes', target) || [];
+        : Reflect.getMetadata('design:paramtypes', target);
     const updated = add(deps, dep, parameterIndex);
     Reflect.defineMetadata(DEPENDENCIES_MEDATADA_KEY, updated, target);
     Container.objectsCount++;
