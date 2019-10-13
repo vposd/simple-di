@@ -1,6 +1,6 @@
 # Outputs
-coverage/
-dist/
+/coverage
+/dist
 
 # IDEs
 .vscode/
