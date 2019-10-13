@@ -13,45 +13,45 @@ npm i @vposd/simple-di --save
 ## Usage
 
 ### Injectable
-
 Class decorator adds class to global registry and add to container by default.
 Each container has different class instance.
 
 ```typescript
 import 'reflect-metadata';
-import { Container } from 'simple-di';
+import { Container } from '@vposd/simple-di';
 
 @Injectable()
-class A {
-  constructor(private b: B) {}
+class Some {
+  constructor(
+    private dep: Dependency
+  ) { }
 }
 
 const container = new Container();
-const instance = container.get(A);
+const instance = container.get(Some);
 ```
 
 ### Inject
-
 Parameter decorator allows inject interface and other object and non-object values.
 
 ```typescript
 import 'reflect-metadata';
-import { Container } from 'simple-di';
+import { Container } from '@vposd/simple-di';
 
 const Worker = Symbol.for('Worker');
 
 interface Worker {
-  work();
+  run();
 }
 
 class Task implements Worker {
-  work() {
-    // implement work
-  }
+  run() { }
 }
 
 class App {
-  constructor(@Inject(Worker) private worker: Worker) {}
+  constructor(
+    @Inject(Worker) private worker: Worker
+  ) { }
 }
 
 const container = new Container().registerType(Worker, Task);

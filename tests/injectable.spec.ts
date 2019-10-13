@@ -114,7 +114,7 @@ describe('Injectable decorator', () => {
     expect(container.get(Ship).engage()).toBe('impulse engine works');
   });
 
-  test('should work with abstract classes', () => {
+  test('should work with other classes', () => {
 
     @Injectable()
     class Ship {
@@ -135,6 +135,32 @@ describe('Injectable decorator', () => {
       .registerType(Engine, ImpulseEngine);
 
     expect(container.get(Engine) instanceof ImpulseEngine).toBe(true);
+    expect(container.get(Ship).engage()).toBe('impulse engine works');
+  });
+
+  test('should work with abstract classes', () => {
+    abstract class AbstractEngine {
+      start: () => string;
+    }
+
+    @Injectable()
+    class Ship {
+      constructor(private engine: AbstractEngine) { }
+
+      engage() {
+        return this.engine.start();
+      }
+    }
+
+    class ImpulseEngine implements AbstractEngine {
+      start() {
+        return 'impulse engine works';
+      }
+    }
+
+    const container = new Container()
+      .registerType(AbstractEngine, ImpulseEngine);
+
     expect(container.get(Ship).engage()).toBe('impulse engine works');
   });
 })

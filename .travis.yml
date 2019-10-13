@@ -6,7 +6,7 @@ script:
   - npm run test
   - npm run build
 after_success:
-  - npm run codecov
+  - npm run report-coverage
 deploy:
   provider: npm
   email: vpposd@gmail.com
