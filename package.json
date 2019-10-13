@@ -48,7 +48,7 @@
   "scripts": {
     "build": "tsc --p tsconfig.prod.json",
     "test": "npx jest --coverage",
-    "coveralls": "npx jest --coverage && codecov"
+    "codecov": "npx jest --coverage && codecov"
   },
   "jest": {
     "preset": "ts-jest",
