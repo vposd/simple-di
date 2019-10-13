@@ -1,7 +1,7 @@
 {
   "name": "di-container",
   "version": "0.0.4",
-  "description": "Simple lightweight DI container written in Typescript",
+  "description": "Minimalistic and lightweight DI container written in Typescript",
   "main": "dist/index.js",
   "files": [
     "dist"
