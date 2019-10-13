@@ -1,4 +1,4 @@
-[![Travis](https://api.travis-ci.org/vposd/simple-di.svg)](https://travis-ci.org/vposd/simple-di/) [![codecov](https://codecov.io/gh/vposd/simple-di/branch/master/graph/badge.svg)](https://codecov.io/gh/vposd/simple-di) [!(https://badgen.net/bundlephobia/minzip/@vposd/simple-di)](https://badgen.net/bundlephobia/minzip/@vposd/simple-di)
+[![Travis](https://api.travis-ci.org/vposd/simple-di.svg)](https://travis-ci.org/vposd/simple-di/) [![codecov](https://codecov.io/gh/vposd/simple-di/branch/master/graph/badge.svg)](https://codecov.io/gh/vposd/simple-di) [![bundlephobia](https://badgen.net/bundlephobia/minzip/@vposd/simple-di)](https://badgen.net/bundlephobia/minzip/@vposd/simple-di)
 
 # Simple DI
 
