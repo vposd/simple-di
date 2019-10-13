@@ -4,7 +4,11 @@ import { DEPENDENCIES_MEDATADA_KEY } from './decorators';
 import { Dependency, Constructor } from './types';
 import { isFunction, isSymbol } from './util';
 
-/** DI Container */
+/**
+ * DI Container
+ * 
+ * Each container instance build own class instance
+ * */
 export class Container {
 
   private readonly singletons = new Map<Constructor<any>, any>();
