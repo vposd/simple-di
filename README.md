@@ -4,6 +4,12 @@
 
 A minimalistic and lightweight DI container written in Typescript
 
+## Installation
+
+```
+npm i @vposd/simple-di --save
+```
+
 ## Usage
 
 ### Injectable
