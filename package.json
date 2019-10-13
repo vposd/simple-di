@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@types/jest": "^24.0.18",
-    "coveralls": "^3.0.7",
+    "codecov": "^3.6.1",
     "jest": "^24.9.0",
     "reflect-metadata": "^0.1.13",
     "ts-jest": "^24.1.0"
@@ -48,7 +48,7 @@
   "scripts": {
     "build": "tsc --p tsconfig.prod.json",
     "test": "npx jest --coverage",
-    "coveralls": "npx jest --coverage && cat ./coverage/lcov.info | coveralls"
+    "coveralls": "npx jest --coverage && codecov"
   },
   "jest": {
     "preset": "ts-jest",
