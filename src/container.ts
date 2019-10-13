@@ -7,7 +7,7 @@ import { isFunction, isSymbol } from './util';
 /**
  * DI Container
  * 
- * Each container instance build own class instance
+ * Each container instance contains own class instance
  * */
 export class Container {
 
