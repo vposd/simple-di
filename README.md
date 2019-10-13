@@ -1,3 +1,5 @@
+[![Travis](https://api.travis-ci.org/vposd/simple-di.svg)](https://travis-ci.org/vposd/simple-di/)
+
 # Simple DI
 
 A minimalistic and lightweight DI container written in Typescript

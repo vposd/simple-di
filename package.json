@@ -1,6 +1,6 @@
 {
-  "name": "di-container",
-  "version": "0.0.4",
+  "name": "@vposd/simple-di",
+  "version": "0.0.5",
   "description": "Minimalistic and lightweight DI container written in Typescript",
   "main": "dist/index.js",
   "files": [
@@ -46,8 +46,7 @@
   },
   "scripts": {
     "build": "tsc --p tsconfig.prod.json",
-    "test": "npx jest",
-    "prebublish": "npm run build"
+    "test": "npx jest"
   },
   "jest": {
     "preset": "ts-jest",
